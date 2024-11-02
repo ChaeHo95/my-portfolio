@@ -73,9 +73,9 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Set environment variables
+        run: echo "REPO_NAME=${{ secrets.REPO_NAME }}" >> $GITHUB_ENV
       - name: Build with Next.js
-        env:
-          REPO_NAME: ${{ secrets.REPO_NAME }}  # GitHub Secrets에서 환경 변수 사용
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
