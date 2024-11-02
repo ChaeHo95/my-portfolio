@@ -1,15 +1,15 @@
 # IntelliJ 관련 설정 폴더
-.idea
+.idea/
 
-# Node 모듈과 Next.js 빌드 폴더
-node_modules
-.next
+# Node.js 모듈과 Next.js 빌드 폴더
+node_modules/
+.next/
 
 # 테스트 및 코드 커버리지 결과물
-coverage
+coverage/
 
 # 빌드 결과물
-build
+build/
 
 # 환경 설정 파일
 *.config.js
