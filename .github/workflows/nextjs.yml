@@ -74,7 +74,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Set environment variables
-        run: echo "REPO_NAME=${{ secrets.REPO_NAME }}" >> $GITHUB_ENV
+        run: |
+          echo "REPO_NAME=${{ secrets.REPO_NAME }}" >> $GITHUB_ENV
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
