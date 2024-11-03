@@ -11,7 +11,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') => ({
         }
       : {
           primary: { main: '#90caf9' },
-          background: { default: '#121212' },
+          background: { default: '#20232A' },
         }),
   },
   typography: {
