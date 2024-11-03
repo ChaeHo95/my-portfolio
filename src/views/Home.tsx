@@ -1,6 +1,7 @@
 'use client';
 import { Box, Button, Typography } from '@mui/material';
 import temp from '@/assets/images/temp.jpg';
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
         <Typography variant="body1" className="mb-6 text-lg">
           Frontend Developer with a passion for building seamless and engaging user experiences.
         </Typography>
-        <Button variant="contained" color="primary" href="/about" className="rounded-lg px-6 py-3">
+        <Button variant="contained" component={Link} color="primary" href="/about" className="rounded-lg px-6 py-3">
           Learn More About Me
         </Button>
       </Box>
