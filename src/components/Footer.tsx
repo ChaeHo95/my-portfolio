@@ -4,19 +4,11 @@ import { GitHub, Description } from '@mui/icons-material';
 
 const Footer = () => {
   return (
-    <Box
-      component="footer"
-      sx={{
-        backgroundColor: 'background.paper',
-        padding: 2,
-        textAlign: 'center',
-        mt: 'auto',
-      }}
-    >
+    <Box component="footer" className="mt-auto p-2 text-center">
       <Typography variant="body2" color="text.secondary" align="center">
         © {new Date().getFullYear()} My Portfolio. All rights reserved.
       </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
+      <Box className="mt-1 flex justify-center">
         <IconButton color="inherit" href="https://github.com/ChaeHo95" target="_blank" rel="noopener">
           <GitHub />
         </IconButton>
