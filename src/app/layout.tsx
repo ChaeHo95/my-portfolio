@@ -4,6 +4,8 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Roboto } from 'next/font/google';
 import ClientThemeProvider from '@/components/ClientThemeProvider';
 import '@/assets/styles/index.css';
+import Header from '@/components/Haeder';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'My Portfolio Site',
@@ -27,7 +29,11 @@ export default function RootLayout({
       <body className={roboto.variable} id={'root'}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <AppRouterCacheProvider>
-            <ClientThemeProvider>{children}</ClientThemeProvider>
+            <ClientThemeProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ClientThemeProvider>
           </AppRouterCacheProvider>
         </AppRouterCacheProvider>
       </body>
